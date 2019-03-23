@@ -1,0 +1,33 @@
+.home_all {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  width: 100%;
+  height: 100%;
+  .home_header {
+    width: 100%;
+    height: 13vh;
+    // background-color: rgba(212, 172, 172, 0.3);
+
+    .home_header_icon {
+      float: left;
+      width: 25vw;
+      height: 13vh;
+      margin-left: 3vw;
+      background-image: url(../../assets/headericon.jpg);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .home_header_navigate {
+      float: right;
+      width: 70vw;
+      height: 9vh;
+    }
+  }
+  .home_content {
+    width: 70vw;
+    height: 46h;
+    background-color: rgba(212, 172, 172, 0.3);
+  }
+}
