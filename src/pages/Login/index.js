@@ -85,7 +85,7 @@ class index extends Component {
                             </Form.Item>
                         </Form>
                         <Breadcrumb className={styles.regi_form_href}>
-                            <Breadcrumb.Item><a href="">立即注册</a></Breadcrumb.Item>
+                            <Breadcrumb.Item><a href="#/Register">立即注册</a></Breadcrumb.Item>
                             <Breadcrumb.Item><a href="">忘记密码</a></Breadcrumb.Item>
                         </Breadcrumb>
                     </div>
