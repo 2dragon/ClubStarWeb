@@ -1,0 +1,19 @@
+.index {
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 4vw;
+  margin-top: 6vh;
+  font-style: "微软雅黑";
+  font-size: 19px;
+  color: rgb(255, 0, 0);
+  button {
+    width: 35vw;
+    height: 6vh;
+    margin-top: 1vh;
+    font-style: "微软雅黑";
+    font-size: 21px;
+    color: rgb(0, 0, 255);
+  }
+}

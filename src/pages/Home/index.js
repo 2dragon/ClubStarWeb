@@ -1,7 +1,5 @@
 import styles from './index.scss';
 import React, { Component } from 'react';
-// import { Layout, } from 'antd'
-// const { Header, Content, Footer } = Layout;
 import { Menu, Icon } from 'antd';
 
 class index extends Component {

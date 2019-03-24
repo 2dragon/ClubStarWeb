@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-// import { connect } from 'dva';
 import axios from 'axios';
 import styles from './index.scss';
 import {
     Form, Icon, Input, Button, Breadcrumb
 } from 'antd';
-// const { Option } = Select;
-
+    
 class index extends Component {
     // 自定义表单校验规则
     validatorForm = (rule, value, callback) => {
