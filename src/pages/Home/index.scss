@@ -3,8 +3,11 @@
   // flex-direction: column;
   // justify-content: center;
   // align-items: center;
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
+  a:hover{
+    color: #f04848
+  }
   .home_header {
     width: 100%;
     height: 13vh;
@@ -14,20 +17,85 @@
       float: left;
       width: 25vw;
       height: 13vh;
-      margin-left: 3vw;
-      background-image: url(../../assets/headericon.jpg);
-      background-size: 100% 100%;
+      margin-left: 5vw;
+      background-image: url(../../assets/headericon.jpg) ;
+      background-size: 90% 90%;
       background-repeat: no-repeat;
     }
     .home_header_navigate {
       float: right;
-      width: 70vw;
-      height: 9vh;
+      width: 45vw;
+      height: 10vh;
+      margin-top: 2vh;
     }
   }
   .home_content {
-    width: 70vw;
-    height: 46h;
-    background-color: rgba(212, 172, 172, 0.3);
+    width: 100vw;
+    height: 68vh;
+    // margin-left: 5vw;
+    position: center 5vh;
+    background-image: url(../../assets/headerbc.jpeg) ;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    // background-color: rgba(212, 172, 172, 0.3);
+  }
+
+  .home_content_text{
+    display: inline-block;
+    color: #fff;
+    margin-top: 16vh;
+    margin-left: 10vw;
+  }
+  .home_content_text hr{
+    // font-size: 34px;
+    // width: 10vw;
+    font-weight: 600;
+  }
+  .home_content_tag a{
+    // display: block;
+    color: #fff;
+    // margin-top: 10vh;
+    // margin-left: 10vw;
+    font-size: 34px;
+  }
+
+  .home_content_tagtwo{
+    margin-top: 5vh;
+  }
+  .home_content_tagtwo a{
+    color: #fff;
+    font-size: 24px;
+    padding: 1vh 2vw;
+    border: 2px solid rgb(160, 155, 155);
+    border-radius: 5px;
+  }
+
+  //activities
+  .home_main_activity{
+    background-color: rgb(150, 105, 105);
+    width: 50vh ;
+  }
+  .home_main_topName{
+    font-size: 30px;
+    color: #505050;
+    text-align: center;
+
+  }
+  .home_main_topSubName{
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+  }
+//轮播图
+  .ant-carousel .slick-slide {
+    text-align: center;
+    height: 160px;
+    line-height: 160px;
+    background: #364d79;
+    overflow: hidden;
+  }
+  
+  .ant-carousel .slick-slide h3 {
+    color: #fff;
   }
 }
