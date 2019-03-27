@@ -4,6 +4,8 @@ import IndexPage from './pages/IndexPage';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Home from './pages/Home';
+import Forgetpsd from './pages/Forgetpsd';
+import Resetpsd from './pages/Resetpsd';
 
 
 function RouterConfig({ history }) {
@@ -14,6 +16,8 @@ function RouterConfig({ history }) {
         <Route path="/Register" exact component={Register} />
         <Route path="/Login" exact component={Login} />
         <Route path="/Home" exact component={Home} />
+        <Route path="/Forgetpsd" exact component={Forgetpsd} />
+        <Route path="/Resetpsd" exact component={Resetpsd} />
       </Switch>
     </Router>
   );
