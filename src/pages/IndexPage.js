@@ -10,6 +10,8 @@ function IndexPage() {
       <Button block ><a href="#/Register">Register页面</a></Button>
       <Button block><a href="#/Login">Login页面</a></Button>
       <Button block><a href="#/Home">Home页面</a></Button>
+      <Button block><a href="#/Resetpsd">Resetpsd页面</a></Button>
+      <Button block><a href="#/Forgetpsd">Forgetpsd页面</a></Button>
     </div>
   );
 }
