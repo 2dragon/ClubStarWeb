@@ -1,9 +1,34 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import styles from './index.scss';
 import { Form, Icon, Input, Button } from 'antd';
 
 class index extends Component {
+    //提交按钮发起post请求函数
+    ResetpsdSubmit = e => {
+        e.preventDefault();
+        //表单获取
+        this.props.form.validateFields((err, values) => {
+            // 解构取值
+            if (!err) {
+                const { psd, surepsd, } = values;
+                // 发起网络请求
+                axios({
+                    method: 'post',
+                    url: '',
+                    data: {
+                        psd, surepsd,
+                    }
+                }).then(res => {
+                    // console.log(res);
+                    if (res.status === 200 && res.data) {
+                        // console.log(this.props.history);
+                        this.props.history.push('/login');
+                    }
+                });
+            }
+        });
+    };
     render() {
         const { getFieldDecorator } = this.props.form;
         return (
@@ -39,7 +64,7 @@ class index extends Component {
                                 )}
                             </Form.Item>
                             <Form.Item >
-                                <Button className={styles.regi_form_btn} ><a href="#/Login">下一步</a></Button>
+                                <Button onClick={this.ForgetpsdSubmit} className={styles.regi_form_btn} ><a href="#/Login">下一步</a></Button>
                             </Form.Item>
                         </Form>
                     </div>

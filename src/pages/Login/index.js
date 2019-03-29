@@ -15,7 +15,7 @@ class index extends Component {
     };
 
     //提交按钮发起post请求函数
-    handleSubmit = e => {
+    LoginSubmit = e => {
         e.preventDefault();
         //表单获取
         this.props.form.validateFields((err, values) => {
@@ -82,15 +82,13 @@ class index extends Component {
                                 )}
                             </Form.Item>
                             <Form.Item >
-                                <Button onClick={this.handleSubmit} className={styles.regi_form_btn}>立即登陆</Button>
+                                <Button onClick={this.LoginSubmit} className={styles.regi_form_btn}>立即登陆</Button>
                             </Form.Item>
                             <Breadcrumb className={styles.regi_form_href}>
                                 <Breadcrumb.Item><a href="#/Register">立即注册</a></Breadcrumb.Item>
                                 <Breadcrumb.Item><a href="#/Forgetpsd">忘记密码</a></Breadcrumb.Item>
                             </Breadcrumb>
                         </Form>
-
-
                     </div>
                 </div>
             </div>

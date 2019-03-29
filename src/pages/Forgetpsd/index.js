@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import styles from './index.scss';
 import {
     Form, Icon, Input, Button, Select
@@ -8,6 +8,32 @@ import {
 const { Option } = Select;
 
 class index extends Component {
+
+    //提交按钮发起post请求函数
+    ForgetpsdSubmit = e => {
+        e.preventDefault();
+        //表单获取
+        this.props.form.validateFields((err, values) => {
+            // 解构取值
+            if (!err) {
+                const { question, answer, } = values;
+                // 发起网络请求
+                axios({
+                    method: 'post',
+                    url: '',
+                    data: {
+                        question, answer,
+                    }
+                }).then(res => {
+                    // console.log(res);
+                    if (res.status === 200 && res.data) {
+                        // console.log(this.props.history);
+                        this.props.history.push('/login');
+                    }
+                });
+            }
+        });
+    };
     render() {
         const { getFieldDecorator } = this.props.form;
         return (
@@ -19,7 +45,7 @@ class index extends Component {
                         <div>重置密码</div>
                         <Form className={styles.regi_forget} >
                             <Form.Item label="选择密保问题" className={styles.regi_form_item} >
-                                {getFieldDecorator('secret')}
+                                {getFieldDecorator('question')}
                                 <Select placeholder="选择密保问题" >
                                     <Option value="father">您父亲的名字是?</Option>
                                     <Option value="mather">您母亲的名字是?</Option>
@@ -41,7 +67,7 @@ class index extends Component {
                                 )}
                             </Form.Item>
                             <Form.Item >
-                                <Button className={styles.regi_form_btn}><a href="#/Resetpsd">下一步</a></Button>
+                                <Button onClick={this.ForgetpsdSubmit} className={styles.regi_form_btn}><a href="#/Resetpsd">下一步</a></Button>
                             </Form.Item>
                         </Form>
                     </div>

@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import styles from './index.scss';
-import {
-  Form, Icon, Input, Select, Button
-} from 'antd';
+import { Form, Icon, Input, Select, Button } from 'antd';
 const { Option } = Select;
 
 class index extends Component {
@@ -32,13 +30,13 @@ class index extends Component {
     this.props.form.validateFields((err, values) => {
       // 解构取值
       if (!err) {
-        const { phoneNum, pwd, sex } = values;
+        const { phoneNum, pwd, petname, sex, secrit, answer } = values;
         // 发起网络请求
         axios({
           method: 'post',
           url: '',
           data: {
-            phoneNum, pwd, sex
+            phoneNum, pwd, petname, sex, secrit, answer
           }
         }).then(res => {
           // console.log(res);
