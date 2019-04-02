@@ -3,16 +3,25 @@
   // flex-direction: column;
   // justify-content: center;
   // align-items: center;
-  // margin: 0 auto;
-  // width: 90%;
+  width: 100%;
+  // background-color: #fff;
   // height: 100%;
+  background-color: #EEECEC;
 
+}
+.home_all_it{
+  width: 90vw;
+  margin: 0 auto;
+  // background-color: #EEECEC;
+  height: auto;
+}
   div{
     display: block;
   }
   .home_header {
     width: 100%;
     height: 13vh;
+    background-color: #fff;
     // background-color: rgba(212, 172, 172, 0.3);
 
     .home_header_icon {
@@ -32,10 +41,10 @@
     }
   }
   .home_content {
-    width: 100vw;
+    width: 90vw;
     height: 68vh;
     // margin-left: 5vw;
-    position: center 5vh;
+    // position: center 5vh;
     background-image: url(../../assets/headerbc.jpeg) ;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -102,15 +111,15 @@
   padding-top: 2vh;
 }
 .home_main_pictures img{
-  width: 80vw;
-  height: 40vh;
+  width: 800px;
+  height: 504px;
   margin: 3vh auto;
 }
   .ant-carousel .slick-slide{
     text-align: center;
-    height: 160px;
-    line-height: 160px;
-    background: url(../../assets/lunbo1.jpg) center 10vh no-repeat;
+    height: 540px;
+    line-height: 540px;
+    // background: url(../../assets/lunbo2.jpg) center 10vh no-repeat;
     // background: #364d79;
     overflow: hidden;
   }
@@ -257,7 +266,8 @@
 
 .home_main_prize_items{
   // margin: 5vh 5vw;
-  padding: 5vh 5vw;
+
+  padding: 5vh auto;
   // margin-left: 5vh;
   // background-color: rgb(125, 211, 91);
   overflow: hidden;
@@ -314,7 +324,7 @@
   padding-bottom: 5vh;
 }
 .home_main_club_items{
-  margin: 2vh 5vw;
+  margin: 2vh auto;
   overflow: hidden;
 
 }
@@ -355,5 +365,4 @@
 }
 .home_footer_copyright a{
   color: rgb(248, 248, 86);
-}
 }
