@@ -25,20 +25,21 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      
+
       .regi_icon {
         background: url(../../assets/xingqiu.png);
         width: 6vw;
         height: 12vh;
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        margin-top: 3vh;
+        margin-top: 1vh;
       }
-      .regi_form {
+      .regi_forget {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        // display: none;
         .regi_form_item {
           margin: 0;
           padding: 0;
@@ -47,11 +48,7 @@
         .regi_form_btn {
           margin-top: 3vh;
           width: 17vw;
-        }
-        .regi_form_href {
-          margin-bottom: 5vh;
-          margin-left: 8vw;
-          padding-top: 0;
+          margin-bottom: 2vh;
         }
       }
     }

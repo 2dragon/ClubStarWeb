@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import styles from './index.scss';
-import {
-    Form, Icon, Input, Button, Breadcrumb
-} from 'antd';
-    
+import {Form, Icon, Input, Button, Breadcrumb} from 'antd';
+
 class index extends Component {
-    // 自定义表单校验规则
+
+    // 验证密码与确认密码是否一致
     validatorForm = (rule, value, callback) => {
         if (value && rule.pattern && !value.match(rule.pattern)) {
             callback(rule.message);
@@ -15,20 +14,20 @@ class index extends Component {
         }
     };
 
-    //提交函数
-    handleSubmit = e => {
+    //提交按钮发起post请求函数
+    LoginSubmit = e => {
         e.preventDefault();
         //表单获取
         this.props.form.validateFields((err, values) => {
             // 解构取值
             if (!err) {
-                const { phoneNum, pwd,  } = values;
+                const { phoneNum, pwd, } = values;
                 // 发起网络请求
                 axios({
                     method: 'post',
                     url: '',
                     data: {
-                        phoneNum, pwd, 
+                        phoneNum, pwd,
                     }
                 }).then(res => {
                     // console.log(res);
@@ -40,6 +39,7 @@ class index extends Component {
             }
         });
     };
+
     //虚拟Dom
     render() {
         const { getFieldDecorator } = this.props.form;
@@ -48,7 +48,10 @@ class index extends Component {
                 <div className={styles.regi_bg}>
                     <div className={styles.regi_main}>
                         <div className={styles.regi_icon}></div>
-                        <Form className={styles.regi_form}>
+                        {/* login注册 */}
+                        <Form className={styles.regi_form}  >
+                            <br />
+                            <div>社团星账号登陆</div>
                             <Form.Item label="手机号码:" className={styles.regi_form_item} >
                                 {getFieldDecorator('phoneNum', {
                                     rules: [
@@ -79,13 +82,13 @@ class index extends Component {
                                 )}
                             </Form.Item>
                             <Form.Item >
-                                <Button onClick={this.handleSubmit} className={styles.regi_form_btn}>立即登陆</Button>
+                                <Button onClick={this.LoginSubmit} className={styles.regi_form_btn}>立即登陆</Button>
                             </Form.Item>
+                            <Breadcrumb className={styles.regi_form_href}>
+                                <Breadcrumb.Item><a href="#/Register">立即注册</a></Breadcrumb.Item>
+                                <Breadcrumb.Item><a href="#/Forgetpsd">忘记密码</a></Breadcrumb.Item>
+                            </Breadcrumb>
                         </Form>
-                        <Breadcrumb className={styles.regi_form_href}>
-                            <Breadcrumb.Item><a href="#/Register">立即注册</a></Breadcrumb.Item>
-                            <Breadcrumb.Item><a href="">忘记密码</a></Breadcrumb.Item>
-                        </Breadcrumb>
                     </div>
                 </div>
             </div>
