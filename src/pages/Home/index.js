@@ -58,6 +58,10 @@ class index extends Component {
                                 <div> <img src={require('../../assets/lunbo4.jpg')} alt="notice1" /></div>
                                 <div> <img src={require('../../assets/lunbo5.jpg')} alt="notice2" /></div>
                                 <div> <img src={require('../../assets/lunbo6.jpg')} alt="notice3" /></div>
+                                <div>
+                                    <a href=""></a>
+                                    <a href="">></a>
+                                </div>
                             </Carousel>,
                     </div>
                         <div className={styles.home_main_notices}>
