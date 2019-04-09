@@ -5,7 +5,6 @@ import {
     Form, Icon, Input, Button, Select
 } from 'antd';
 
-const { Option } = Select;
 
 class index extends Component {
 
@@ -44,15 +43,9 @@ class index extends Component {
                         {/* 忘记密码 */}
                         <div>重置密码</div>
                         <Form className={styles.regi_forget} >
-                            <Form.Item label="选择密保问题" className={styles.regi_form_item} >
+                            <Form.Item label="密保问题" className={styles.regi_form_item} >
                                 {getFieldDecorator('question')}
-                                <Select placeholder="选择密保问题" >
-                                    <Option value="father">您父亲的名字是?</Option>
-                                    <Option value="mather">您母亲的名字是?</Option>
-                                    <Option value="primary">您小学的名字是?</Option>
-                                    <Option value="middle">您初中的名字是?</Option>
-                                    <Option value="high">您高中的名字是?</Option>
-                                </Select>
+                                <Button className={styles.regi_form_mes}>你妈妈的名字是？</Button>
                             </Form.Item>
                             <Form.Item label="输入密保答案:" className={styles.regi_form_item} >
                                 {getFieldDecorator('answer', {
