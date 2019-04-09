@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import styles from './index.scss';
-import {Form, Icon, Input, Button, Breadcrumb} from 'antd';
+import {Form, Icon, Input, Button, Breadcrumb, message} from 'antd';
 
 class index extends Component {
 
@@ -21,19 +21,22 @@ class index extends Component {
         this.props.form.validateFields((err, values) => {
             // 解构取值
             if (!err) {
-                const { phoneNum, pwd, } = values;
+                const { phone, password, } = values;
                 // 发起网络请求
                 axios({
                     method: 'post',
-                    url: '',
+                    url: 'http://192.168.6.104:8081/user/login',
                     data: {
-                        phoneNum, pwd,
+                        phone, password,
                     }
                 }).then(res => {
-                    // console.log(res);
                     if (res.status === 200 && res.data) {
-                        // console.log(this.props.history);
-                        this.props.history.push('/login');
+                        if (res.data.status === 'success') {
+                            message.success('登陆成功！');
+                          }
+                        else if (res.data.status === 'false') {
+                            message.error('登陆失败，请检查手机号或密码！');
+                          }
                     }
                 });
             }
@@ -53,7 +56,7 @@ class index extends Component {
                             <br />
                             <div>社团星账号登陆</div>
                             <Form.Item label="手机号码:" className={styles.regi_form_item} >
-                                {getFieldDecorator('phoneNum', {
+                                {getFieldDecorator('phone', {
                                     rules: [
                                         {
                                             required: true,
@@ -70,7 +73,7 @@ class index extends Component {
                                 )}
                             </Form.Item>
                             <Form.Item label="请输入密码:" className={styles.regi_form_item} >
-                                {getFieldDecorator('pwd', {
+                                {getFieldDecorator('password', {
                                     rules: [
                                         {
                                             min: 6,

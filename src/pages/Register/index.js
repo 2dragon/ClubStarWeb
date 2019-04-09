@@ -37,7 +37,7 @@ class index extends Component {
         // 发起网络请求
         axios({
           method: 'post',
-          url: 'http://192.168.6.104:8081/user/save',
+          url: 'http://192.168.6.104:8081/user/register',
           data: {
             phone, password, username, sex
           }
@@ -121,7 +121,7 @@ class index extends Component {
                   <Option value="female">女</Option>
                 </Select>
               </Form.Item>
-              {/* <Form.Item label="选择密保问题" className={styles.regi_form_item} >
+              <Form.Item label="选择密保问题" className={styles.regi_form_item} >
                 {getFieldDecorator('secret')}
                 <Select placeholder="选择密保问题" >
                   <Option value="father">您父亲的名字是?</Option>
@@ -142,7 +142,7 @@ class index extends Component {
                 })(
                   <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="请输入昵称" />
                 )}
-              </Form.Item> */}
+              </Form.Item>
               <Form.Item >
                 <Button onClick={this.handleSubmit} className={styles.regi_form_btn}>立即注册</Button>
               </Form.Item>
