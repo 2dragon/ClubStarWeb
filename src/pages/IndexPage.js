@@ -13,6 +13,8 @@ function IndexPage() {
       <Button block><a href="#/Resetpsd">Resetpsd页面</a></Button>
       <Button block><a href="#/Forgetpsd">Forgetpsd页面</a></Button>
       <Button block><a href="#/Personal">Personal页面</a></Button>
+      <Button block><a href="#/Createclub">Createclub页面</a></Button>
+      <Button block><a href="#/Allclub">Allclub页面</a></Button>
     </div>
   );
 }
