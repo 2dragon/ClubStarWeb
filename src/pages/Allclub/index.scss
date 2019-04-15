@@ -1,0 +1,67 @@
+.crcb_page {
+  width: 100%;
+  height: 100%;
+  .crcb_header {
+    background-color: rgb(255, 255, 255);
+    height: 9vh;
+    box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.09);
+    .crcb_logo {
+      background: url(../../assets/xingqiu.png);
+      width: 6vw;
+      height: 10vh;
+      float: left;
+      margin-left: 5vw;
+      margin-top: -1vh;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .crcb_menu {
+      float: right;
+      height: 7vh;
+      border: none;
+      margin-top: 1vh;
+    }
+  }
+  .crcb_content {
+    background-color:rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .crcb_content_word {
+      margin-top: 1vh;
+      font-size: 25px;
+    }
+    .crcb_content_allsearch {
+      display: flex;
+      margin-top: 5vh;
+      .crcb_content_search {
+        margin-left: 7vw;
+      }
+      .crcb_content_searchword {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 2vw;
+        font-size: 15px;
+      }
+    }
+    .crcb_content_form {
+      margin-top: 10vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .crcb_content_form_lazyload {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .crcb_footer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+  }
+}

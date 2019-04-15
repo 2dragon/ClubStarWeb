@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './index.scss';
-import { Form, Layout, Menu, Icon, Input, Select, DatePicker, Upload, message ,Button} from 'antd';
+import { Form, Layout, Menu, Icon, Input, Select, DatePicker, Upload, message, Button } from 'antd';
+import axios from 'axios';
 
 const { Header, Footer, Content } = Layout;
 const { Option } = Select;
@@ -67,7 +68,32 @@ class Avatar extends React.Component {
 }
 
 class index extends Component {
-
+    //提交函数
+    handleSubmit = e => {
+        e.preventDefault();
+        // loading;
+        //表单获取
+        this.props.form.validateFields((err, values) => {
+            // 解构取值
+            if (!err) {
+                const {  clubname,createdate,introduce,clublogo,clubstyle} = values;
+                // 发起网络请求
+                axios({
+                    method: 'post',
+                    url: ' ',
+                    data: {
+                        clubname,createdate,introduce,clublogo,clubstyle
+                    }
+                }).then(res => {
+                    if (res.status === 200 && res.data) {
+                        if (res.data.status === 'success') {
+                            message.success('社员创建成功！');
+                        }
+                    }
+                });
+            }
+        });
+    };
 
     render() {
         const { getFieldDecorator } = this.props.form;
@@ -101,14 +127,14 @@ class index extends Component {
                                 })(<DatePicker />)}
                             </Form.Item>
                             <Form.Item label="社团简介:" className={styles.crcb_content_form_item} >
-                                {getFieldDecorator('surepwd', {
+                                {getFieldDecorator('introduce', {
 
                                 })(
                                     <TextArea rows={4} className={styles.crcb_content_form_item_con} />
                                 )}
                             </Form.Item>
                             <Form.Item label="上传头像:" className={styles.crcb_content_form_item} >
-                                {getFieldDecorator('username', {
+                                {getFieldDecorator('clublogo', {
 
                                 })(
                                     <div>
