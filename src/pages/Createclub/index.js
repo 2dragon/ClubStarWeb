@@ -78,13 +78,13 @@ class index extends Component {
         this.props.form.validateFields((err, values) => {
             // 解构取值
             if (!err) {
-                const {  clubname,createdate,introduce,clublogo,clubstyle} = values;
+                const { clubname, createdate, introduce, clublogo, clubstyle } = values;
                 // 发起网络请求
                 axios({
                     method: 'post',
                     url: ' ',
                     data: {
-                        clubname,createdate,introduce,clublogo,clubstyle
+                        clubname, createdate, introduce, clublogo, clubstyle
                     }
                 }).then(res => {
                     if (res.status === 200 && res.data) {
@@ -111,6 +111,9 @@ class index extends Component {
                             <Menu.Item className={styles.crcb_menuitem} key="activity" ><Link to={'/Home'}>社团活动</Link></Menu.Item>
                             <Menu.Item className={styles.crcb_menuitem} key="prize" ><Link to={'/Home'}>社团奖</Link></Menu.Item>
                             <Menu.Item className={styles.crcb_menuitem} key="all" ><Link to={'/Allclub'}>全部社团</Link></Menu.Item>
+                            <Menu.Item className={styles.crcb_menuitem} key="per" ><Link to={'/Personal'}>个人中心</Link></Menu.Item>
+
+
                         </Menu>
                     </Header>
                     <Content className={styles.crcb_content}>
