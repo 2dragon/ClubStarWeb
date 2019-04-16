@@ -6,12 +6,11 @@
     height: 9vh;
     box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.09);
     .crcb_logo {
-      background: url(../../assets/xingqiu.png);
-      width: 6vw;
-      height: 10vh;
+      background: url(../../assets/logo.png);
+      width: 17vw;
+      height: 9vh;
       float: left;
       margin-left: 5vw;
-      margin-top: -1vh;
       background-size: 100% 100%;
       background-repeat: no-repeat;
     }
@@ -23,11 +22,12 @@
     }
   }
   .crcb_content {
-    background-color:rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 80vh;
     .crcb_content_word {
       margin-top: 1vh;
       font-size: 25px;
@@ -46,7 +46,7 @@
       }
     }
     .crcb_content_form {
-      margin-top: 10vh;
+      margin-top: 5vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -60,8 +60,15 @@
     }
   }
   .crcb_footer {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0px;
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .crcb_footer_word {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }

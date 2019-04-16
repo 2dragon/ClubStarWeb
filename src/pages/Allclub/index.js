@@ -3,6 +3,7 @@ import styles from './index.scss';
 import { Form, Layout, Menu, Icon, Input, Select, DatePicker, Upload, message, Button, Card } from 'antd';
 import axios from 'axios';
 import LazyLoad from 'react-lazyload';
+import { Link } from 'dva/router';
 
 const { Header, Footer, Content } = Layout;
 const { Option } = Select;
@@ -61,11 +62,11 @@ class index extends Component {
                         <div className={styles.crcb_logo}></div>
                         <Menu className={styles.crcb_menu} theme="light" mode="horizontal"
                             defaultSelectedKeys={['2']} style={{ lineHeight: '8vh', border: 'none' }} >
-                            <Menu.Item className={styles.crcb_menuitem} key="mail">首页</Menu.Item>
-                            <Menu.Item className={styles.crcb_menuitem} key="notice" >社团公告</Menu.Item>
-                            <Menu.Item className={styles.crcb_menuitem} key="activity" >社团活动</Menu.Item>
-                            <Menu.Item className={styles.crcb_menuitem} key="prize" >社团奖</Menu.Item>
-                            <Menu.Item className={styles.crcb_menuitem} key="all" >全部社团</Menu.Item>
+                            <Menu.Item className={styles.crcb_menuitem} key="mail"><Link to={'/Home'}>首页</Link></Menu.Item>
+                            <Menu.Item className={styles.crcb_menuitem} key="notice" ><Link to={'/Home'}>社团公告</Link></Menu.Item>
+                            <Menu.Item className={styles.crcb_menuitem} key="activity" ><Link to={'/Home'}>社团活动</Link></Menu.Item>
+                            <Menu.Item className={styles.crcb_menuitem} key="prize" ><Link to={'/Home'}>社团奖</Link></Menu.Item>
+                            <Menu.Item className={styles.crcb_menuitem} key="all" ><Link to={'/Allclub'}>全部社团</Link></Menu.Item>
                         </Menu>
                     </Header>
                     <Content className={styles.crcb_content}>
@@ -77,7 +78,7 @@ class index extends Component {
                                 onSearch={value => console.log(value)}
                                 style={{ width: 300 }}
                             />
-                            <div className={styles.crcb_content_searchword}>我要创建社团</div>
+                            <div className={styles.crcb_content_searchword}><Link to={'/Createclub'}>我要创建社团</Link></div>
                         </div>
                         <Form className={styles.crcb_content_form}>
                             {/* <LazyLoad height={200} > */}
@@ -86,7 +87,9 @@ class index extends Component {
                             {/* </LazyLoad> */}
                         </Form>
                     </Content>
-                    <Footer className={styles.crcb_footer}>社团星</Footer>
+                    <Footer className={styles.crcb_footer}>
+                        <div className={styles.crcb_footer_word}>社团星</div>
+                    </Footer>
                 </Layout>
             </div >
         );

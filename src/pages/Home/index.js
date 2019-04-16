@@ -2,6 +2,7 @@ import styles from './index.scss';
 import React, { Component } from 'react';
 import { Menu, Icon, Carousel } from 'antd';
 // import Path from '@/tool/path'
+import { Link } from 'dva/router';
 
 
 class index extends Component {
@@ -9,23 +10,19 @@ class index extends Component {
         return (
             <div className={styles.home_all}>
 
-
-
                 {/* 顶部 */}
-                <div className={styles.home_header}>
-                    <div className={styles.home_header_icon}></div>
-                    <div className={styles.home_header_navigate}>
-                        <Menu mode="horizontal">
-                            <Menu.Item key="mail">首页</Menu.Item>
-                            <Menu.Item key="notice" >社团公告</Menu.Item>
-                            <Menu.Item key="activity" >社团活动</Menu.Item>
-                            <Menu.Item key="prize" >社团奖</Menu.Item>
-                            <Menu.Item key="all" >全部社团</Menu.Item>
-                            <Menu.Item key="center" ><a href="https://ant.design" target="_blank" rel="noopener noreferrer">个人中心</a></Menu.Item>
-                            {/* <Menu.Item key="alipay" ><a href="https://ant.design" target="_blank" rel="noopener noreferrer">Navigation Four - Link</a></Menu.Item> */}
-                        </Menu>
-                    </div>
+                <div className={styles.crcb_header}>
+                    <div className={styles.crcb_logo}></div>
+                    <Menu className={styles.crcb_menu} theme="light" mode="horizontal"
+                        defaultSelectedKeys={['2']} style={{ lineHeight: '8vh', border: 'none' }} >
+                        <Menu.Item className={styles.crcb_menuitem} key="mail"><Link to={'/Home'}>首页</Link></Menu.Item>
+                        <Menu.Item className={styles.crcb_menuitem} key="notice" ><Link to={'/Home'}>社团公告</Link></Menu.Item>
+                        <Menu.Item className={styles.crcb_menuitem} key="activity" ><Link to={'/Home'}>社团活动</Link></Menu.Item>
+                        <Menu.Item className={styles.crcb_menuitem} key="prize" ><Link to={'/Home'}>社团奖</Link></Menu.Item>
+                        <Menu.Item className={styles.crcb_menuitem} key="all" ><Link to={'/Allclub'}>全部社团</Link></Menu.Item>
+                    </Menu>
                 </div>
+
                 <div className={styles.home_all_it}>
                     {/* 顶部图片   */}
                     <div className={styles.home_content}>
