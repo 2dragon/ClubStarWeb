@@ -27,7 +27,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: auto;
     .crcb_content_word {
       margin-top: 1vh;
       font-size: 25px;
@@ -46,16 +46,22 @@
       }
     }
     .crcb_content_form {
-      margin-top: 5vh;
+      background-color: rgb(251, 251, 251);
+      box-shadow: inset 0 0px 2px 0 rgba(0, 0, 0, 0.09);
+
+      width: 90%;
+
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: space-between;
+
+      margin: 20px auto;
       .crcb_content_form_lazyload {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        margin-top: 5vh;
+        height: 35vh;
       }
     }
   }

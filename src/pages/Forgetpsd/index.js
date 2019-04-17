@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import styles from './index.scss';
 import {
-    Form, Icon, Input, Button, Select
+    Form, Icon, Input, Button
 } from 'antd';
 
 

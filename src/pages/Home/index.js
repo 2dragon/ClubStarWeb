@@ -1,7 +1,6 @@
 import styles from './index.scss';
 import React, { Component } from 'react';
 import { Menu, Icon, Carousel } from 'antd';
-// import Path from '@/tool/path'
 import { Link } from 'dva/router';
 
 
@@ -21,7 +20,6 @@ class index extends Component {
                         <Menu.Item className={styles.crcb_menuitem} key="prize" ><Link to={'/Home'}>社团奖</Link></Menu.Item>
                         <Menu.Item className={styles.crcb_menuitem} key="all" ><Link to={'/Allclub'}>全部社团</Link></Menu.Item>
                         <Menu.Item className={styles.crcb_menuitem} key="per" ><Link to={'/Personal'}>个人中心</Link></Menu.Item>
-
                     </Menu>
                 </div>
 

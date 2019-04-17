@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import styles from './index.scss';
-import { Form, Layout, Menu, Icon, Input, Select, DatePicker, Upload, message, Button, Card } from 'antd';
-import axios from 'axios';
-import LazyLoad from 'react-lazyload';
+import { Form, Layout, Menu, Input, Card } from 'antd';
+// import axios from 'axios';
+// import LazyLoad from 'react-lazyload';
 import { Link } from 'dva/router';
 
 const { Header, Footer, Content } = Layout;
-const { Option } = Select;
-const { TextArea } = Input;
 const Search = Input.Search;
 const { Meta } = Card;
+
 
 class index extends Component {
     //后台获取所有的社团列表
@@ -28,22 +27,32 @@ class index extends Component {
     //     });
     // }
     clubArray = [
-        { imgherf: '../../assets/lunbo1.jpg', clubname: '猫猫', description: '这里是描述' },
-        { imgherf: '../../assets/lunbo2.jpg', clubname: '树树', description: 'des2' },
-        { imgherf: '../../assets/lunbo3.jpg', clubname: '孔雀', description: 'des3' },
-        { imgherf: '../../assets/lunbo4.jpg', clubname: '河豚', description: 'des4' }
+        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
+        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
+        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
+        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
+        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
+        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
+        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
+        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
+        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
+        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
+        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
     ]
     //懒加载展示所有的社团
-    showAllClub = () => {
+
+    render() {
+        const content = [];
         for (let club of this.clubArray) {
-            //用循环插入到Dom节点中
-            return (
+            //用循环插入到 Dom节点中
+            content.push(
                 <Card
                     hoverable
                     style={{ width: 240 }}
-                    // 这个地址的变量不知道怎么解决
-                    //循环也不知道怎么解决
-                    cover={<img alt="图片显示不了" src={require('../../assets/lunbo4.jpg')} />}
+                    // 这个地址的变量不知道怎么解决-----半解决
+                    //循环也不知道怎么解决-----已解决
+                    cover={<img alt="图片显示不了" src={club.imgherf}/>}
+                    className={styles.crcb_content_form_lazyload}
                 >
                     <Meta
                         title={club.clubname}
@@ -52,9 +61,7 @@ class index extends Component {
                 </Card>
             )
         }
-    }
-    render() {
-        const { getFieldDecorator } = this.props.form;
+        // const { getFieldDecorator } = this.props.form;
         return (
             <div className={styles.crcb_page} >
                 <Layout>
@@ -68,7 +75,6 @@ class index extends Component {
                             <Menu.Item className={styles.crcb_menuitem} key="prize" ><Link to={'/Home'}>社团奖</Link></Menu.Item>
                             <Menu.Item className={styles.crcb_menuitem} key="all" ><Link to={'/Allclub'}>全部社团</Link></Menu.Item>
                             <Menu.Item className={styles.crcb_menuitem} key="per" ><Link to={'/Personal'}>个人中心</Link></Menu.Item>
-
                         </Menu>
                     </Header>
                     <Content className={styles.crcb_content}>
@@ -82,10 +88,10 @@ class index extends Component {
                             />
                             <div className={styles.crcb_content_searchword}><Link to={'/Createclub'}>我要创建社团</Link></div>
                         </div>
-                        <Form className={styles.crcb_content_form}>
+                        <Form ref="all" className={styles.crcb_content_form}>
                             {/* <LazyLoad height={200} > */}
                             {/* 调用函数插入数组 */}
-                            {this.showAllClub()}
+                            {content}
                             {/* </LazyLoad> */}
                         </Form>
                     </Content>
