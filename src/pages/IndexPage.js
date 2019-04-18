@@ -11,7 +11,7 @@ function IndexPage() {
       项目一览表：
       <Button block ><Link to="/Register">Register页面</Link></Button>
       <Button block><Link to="/Login">Login页面</Link></Button>
-      <Button block><Link to="/Home">Home页面</Link></Button>
+      <Button block><Link to="/Home2.0">Home页面</Link></Button>
       <Button block><Link to="/Resetpsd">Resetpsd页面</Link></Button>
       <Button block><Link to="/Forgetpsd">Forgetpsd页面</Link></Button>
       <Button block><Link to="/Personal">Personal页面</Link></Button>

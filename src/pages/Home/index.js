@@ -43,10 +43,10 @@ class index extends Component {
                     <div className={styles.home_main_notice}>
                         <div className={styles.home_main_topName}>
                             社团公告
-                   </div>
+                         </div>
                         <div className={styles.home_main_topSubName}>
                             Notice
-                   </div>
+                         </div>
                         <div className={styles.home_main_pictures}>
                             <Carousel autoplay>
                                 <div> <img src={require('../../assets/lunbo1.jpg')} alt="notice1" /></div>
@@ -59,8 +59,8 @@ class index extends Component {
                                     <a href=""></a>
                                     <a href="">></a>
                                 </div>
-                            </Carousel>,
-                    </div>
+                            </Carousel>
+                        </div>
                         <div className={styles.home_main_notices}>
                             <ul>
                                 <li className={styles.home_main_notices_item}><a href=""><Icon caret-right />以春之名，新学期第一次升旗仪式举行</a></li>

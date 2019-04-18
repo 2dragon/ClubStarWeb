@@ -82,14 +82,27 @@ class index extends Component {
                 // 发起网络请求
                 axios({
                     method: 'post',
-                    url: ' ',
+                    url: '',
                     data: {
                         clubname, createdate, introduce, clublogo, clubstyle
                     }
                 }).then(res => {
                     if (res.status === 200 && res.data) {
                         if (res.data.status === 'success') {
-                            message.success('社员创建成功！');
+                            message.success('社团创建成功！');
+                        }
+                    }
+                });
+                axios({
+                    method: 'fileupload',
+                    url: '',
+                    data: {
+                         clublogo
+                    }
+                }).then(res => {
+                    if (res.status === 200 && res.data) {
+                        if (res.data.status === 'success') {
+                            message.success('社团创建成功！');
                         }
                     }
                 });
@@ -112,8 +125,6 @@ class index extends Component {
                             <Menu.Item className={styles.crcb_menuitem} key="prize" ><Link to={'/Home'}>社团奖</Link></Menu.Item>
                             <Menu.Item className={styles.crcb_menuitem} key="all" ><Link to={'/Allclub'}>全部社团</Link></Menu.Item>
                             <Menu.Item className={styles.crcb_menuitem} key="per" ><Link to={'/Personal'}>个人中心</Link></Menu.Item>
-
-
                         </Menu>
                     </Header>
                     <Content className={styles.crcb_content}>

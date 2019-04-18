@@ -27,17 +27,20 @@ class index extends Component {
     //     });
     // }
     clubArray = [
-        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
-        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
-        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
-        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
-        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
-        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
-        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
-        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
-        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
-        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
-        { imgherf: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png", clubname: '河豚', description: 'des4' },
+        { imgherf: require("../../assets/lunbo1.jpg"), clubname: '河豚', description: 'des4' },
+        { imgherf: require("../../assets/lunbo2.jpg"), clubname: '静安寺', description: 'des4' },
+        { imgherf: require("../../assets/lunbo3.jpg"), clubname: '哈佛是', description: 'des4' },
+        { imgherf: require("../../assets/lunbo4.jpg"), clubname: '河加收欸经', description: 'des4' },
+        { imgherf: require("../../assets/lunbo5.jpg"), clubname: '发护肤', description: 'des4' },
+        { imgherf: require("../../assets/lunbo6.jpg"), clubname: '可控硅', description: 'des4' },
+        { imgherf: require("../../assets/lunbo1.jpg"), clubname: 'iifc', description: 'des4' },
+        { imgherf: require("../../assets/lunbo2.jpg"), clubname: '哦哦是', description: 'des4' },
+        { imgherf: require("../../assets/lunbo4.jpg"), clubname: '能克服', description: 'des4' },
+        { imgherf: require("../../assets/lunbo3.jpg"), clubname: '哦hi奥', description: 'des4' },
+        { imgherf: require("../../assets/lunbo4.jpg"), clubname: '内控机制', description: 'des4' },
+        { imgherf: require("../../assets/lunbo5.jpg"), clubname: '吗v九九', description: 'des4' },
+        { imgherf: require("../../assets/lunbo6.jpg"), clubname: '奥ii哦', description: 'des4' },
+        { imgherf: require("../../assets/lunbo2.jpg"), clubname: '河豚', description: 'des4' },
     ]
     //懒加载展示所有的社团
 
