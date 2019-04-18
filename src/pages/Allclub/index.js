@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './index.scss';
-import { Form, Layout, Menu, Input, Card } from 'antd';
+import { Form, Layout, Menu, Input, Card ,Button} from 'antd';
 // import axios from 'axios';
 // import LazyLoad from 'react-lazyload';
 import { Link } from 'dva/router';
@@ -89,7 +89,7 @@ class index extends Component {
                                 onSearch={value => console.log(value)}
                                 style={{ width: 300 }}
                             />
-                            <div className={styles.crcb_content_searchword}><Link to={'/Createclub'}>我要创建社团</Link></div>
+                            <Button className={styles.crcb_content_searchword}><Link to={'/Createclub'}>我要创建社团</Link></Button>
                         </div>
                         <Form ref="all" className={styles.crcb_content_form}>
                             {/* <LazyLoad height={200} > */}

@@ -1,6 +1,6 @@
 .crcb_page {
   width: 100%;
-  height: 100%;
+  height: auto;
   .crcb_header {
     position: fixed;
     z-index: 1001;
@@ -26,6 +26,7 @@
     }
   }
   .crcb_content {
+    margin-top: 9vh;
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
@@ -38,7 +39,7 @@
     }
     .crcb_content_allsearch {
       display: flex;
-      margin-top: 5vh;
+      margin-top: 3vh;
       .crcb_content_search {
         margin-left: 7vw;
       }
@@ -65,12 +66,13 @@
       margin: 20px auto;
       .crcb_content_form_lazyload {
         margin-top: 5vh;
-        height: 35vh;
+        height: auto;
       }
     }
   }
   .crcb_footer {
     width: 100%;
+    height: auto;
     background-color: rgb(233, 233, 233);
     display: flex;
     flex-direction: column;

@@ -17,7 +17,7 @@ class index extends Component {
                     <Header className={styles.crcb_header}>
                         <div className={styles.crcb_logo}></div>
                         <Menu className={styles.crcb_menu} theme="light" mode="horizontal"
-                            defaultSelectedKeys={['2']} style={{ lineHeight: '8vh', border: 'none' }} >
+                            defaultSelectedKeys={['mail']} style={{ lineHeight: '8vh', border: 'none' }} >
                             <Menu.Item className={styles.crcb_menuitem} key="mail"><Link to={'/Home2.0'}>首页</Link></Menu.Item>
                             <Menu.Item className={styles.crcb_menuitem} key="notice" ><Link to={'/Home2.0'}>社团公告</Link></Menu.Item>
                             <Menu.Item className={styles.crcb_menuitem} key="activity" ><Link to={'/Home2.0'}>社团活动</Link></Menu.Item>

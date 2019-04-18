@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './index.scss';
-import { Form, Layout, Menu, Icon, Input, Select, DatePicker, Upload, message, Button } from 'antd';
+import { Form, Layout, Menu, Icon, Input, Select, DatePicker, Upload, message, Button,Modal } from 'antd';
 import axios from 'axios';
 import { Link } from 'dva/router';
 
@@ -9,67 +9,24 @@ const { Header, Footer, Content } = Layout;
 const { Option } = Select;
 const { TextArea } = Input;
 
-function getBase64(img, callback) {
-    const reader = new FileReader();
-    reader.addEventListener('load', () => callback(reader.result));
-    reader.readAsDataURL(img);
-}
-
-function beforeUpload(file) {
-    const isJPG = file.type === 'image/jpeg';
-    if (!isJPG) {
-        message.error('You can only upload JPG file!');
-    }
-    const isLt2M = file.size / 1024 / 1024 < 2;
-    if (!isLt2M) {
-        message.error('Image must smaller than 2MB!');
-    }
-    return isJPG && isLt2M;
-}
-class Avatar extends React.Component {
+class index extends Component {
     state = {
-        loading: false,
+        previewVisible: false,
+        previewImage: '',
+        fileList: [],
     };
 
-    handleChange = (info) => {
-        if (info.file.status === 'uploading') {
-            this.setState({ loading: true });
-            return;
-        }
-        if (info.file.status === 'done') {
-            // Get this url from response in real world.
-            getBase64(info.file.originFileObj, imageUrl => this.setState({
-                imageUrl,
-                loading: false,
-            }));
-        }
+    handleCancel = () => this.setState({ previewVisible: false })
+
+    handlePreview = (file) => {
+        this.setState({
+            previewImage: file.url || file.thumbUrl,
+            previewVisible: true,
+        });
     }
 
-    render() {
-        const uploadButton = (
-            <div>
-                <Icon type={this.state.loading ? 'loading' : 'plus'} />
-                <div className="ant-upload-text">Upload</div>
-            </div>
-        );
-        const imageUrl = this.state.imageUrl;
-        return (
-            <Upload
-                name="avatar"
-                listType="picture-card"
-                className="avatar-uploader"
-                showUploadList={false}
-                action="//jsonplaceholder.typicode.com/posts/"
-                beforeUpload={beforeUpload}
-                onChange={this.handleChange}
-            >
-                {imageUrl ? <img src={imageUrl} alt="avatar" /> : uploadButton}
-            </Upload>
-        );
-    }
-}
+    handleChange = ({ fileList }) => this.setState({ fileList })
 
-class index extends Component {
     //提交函数
     handleSubmit = e => {
         e.preventDefault();
@@ -80,29 +37,29 @@ class index extends Component {
             if (!err) {
                 const { clubname, createdate, introduce, clublogo, clubstyle } = values;
                 // 发起网络请求
+                // axios({
+                //     method: 'post',
+                //     url: '',
+                //     data: {
+                //         clubname, createdate, introduce, clublogo, clubstyle
+                //     }
+                // }).then(res => {
+                //     if (res.status === 200 && res.data) {
+                //         if (res.data.status === 'success') {
+                //             message.success('社团创建成功！');
+                //         }
+                //     }
+                // });
                 axios({
                     method: 'post',
-                    url: '',
+                    url: 'http://192.168.6.104:8081/club/upload',
                     data: {
-                        clubname, createdate, introduce, clublogo, clubstyle
+                        clublogo
                     }
                 }).then(res => {
                     if (res.status === 200 && res.data) {
                         if (res.data.status === 'success') {
-                            message.success('社团创建成功！');
-                        }
-                    }
-                });
-                axios({
-                    method: 'fileupload',
-                    url: '',
-                    data: {
-                         clublogo
-                    }
-                }).then(res => {
-                    if (res.status === 200 && res.data) {
-                        if (res.data.status === 'success') {
-                            message.success('社团创建成功！');
+                            message.success('图片上传成功！');
                         }
                     }
                 });
@@ -110,8 +67,16 @@ class index extends Component {
         });
     };
 
+
     render() {
         const { getFieldDecorator } = this.props.form;
+        const { previewVisible, previewImage, fileList } = this.state;
+        const uploadButton = (
+            <div>
+                <Icon type="plus" />
+                <div className="ant-upload-text">Upload</div>
+            </div>
+        );
         return (
             <div className={styles.crcb_page} >
                 <Layout>
@@ -151,11 +116,20 @@ class index extends Component {
                             </Form.Item>
                             <Form.Item label="上传头像:" className={styles.crcb_content_form_item} >
                                 {getFieldDecorator('clublogo', {
-
                                 })(
-                                    <div>
-                                        <Avatar className={styles.crcb_content_form_item_con} />
-                                        <div>只支持jpg格式</div>
+                                    <div className="clearfix">
+                                        <Upload
+                                            action="//jsonplaceholder.typicode.com/posts/"
+                                            listType="picture-card"
+                                            fileList={fileList}
+                                            onPreview={this.handlePreview}
+                                            onChange={this.handleChange}
+                                        >
+                                            {fileList.length >= 1 ? null : uploadButton}
+                                        </Upload>
+                                        <Modal visible={previewVisible} footer={null} onCancel={this.handleCancel}>
+                                            <img alt="example" style={{ width: '100%' }} src={previewImage} />
+                                        </Modal>
                                     </div>
                                 )}
                             </Form.Item>
