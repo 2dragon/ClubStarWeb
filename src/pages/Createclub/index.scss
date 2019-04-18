@@ -47,21 +47,30 @@
           width: 25vw;
         }
       }
-      .crcb_content_form_btn {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        .crcb_content_form_btnitem {
-          margin-left: -14vw;
-          width: 5vw;
-        }
+    }
+    .crcb_content_form_btn {
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-around;
+      align-content: space-between;
+      width: 35%;
+      .crcb_content_form_btnitem {
+        width: 6vw;
       }
     }
   }
   .crcb_footer {
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    height: 2vh;
+    padding-top: 10vh;
+    border: solid;
+    .crcb_footer_word {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }

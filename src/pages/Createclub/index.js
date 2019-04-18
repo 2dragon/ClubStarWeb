@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './index.scss';
-import { Form, Layout, Menu, Icon, Input, Select, DatePicker, Upload, message, Button,Modal } from 'antd';
+import { Form, Layout, Menu, Icon, Input, Select, DatePicker, Upload, message, Button, Modal } from 'antd';
 import axios from 'axios';
 import { Link } from 'dva/router';
 
@@ -10,6 +10,7 @@ const { Option } = Select;
 const { TextArea } = Input;
 
 class index extends Component {
+    //保存状态
     state = {
         previewVisible: false,
         previewImage: '',
@@ -30,41 +31,48 @@ class index extends Component {
     //提交函数
     handleSubmit = e => {
         e.preventDefault();
+        // const formData = new FormData();
+        // // const fileUrl = AjaxUrl+"data/fileUpload.svt";
+        // formData.append('files[]', this.state.fileList);
+        // axios({
+        //     method: 'post',
+        //     url: '',
+        //     data: {
+        //         formData
+        //     }
+        // }).then(res => {
+        //     if (res.status === 200 && res.data) {
+        //         if (res.data.status === 'success') {
+        //             message.success('图片上传成功！');
+        //         }
+        //         else message.error('图片上传失败');
+        //     }
+        // });
         // loading;
         //表单获取
         this.props.form.validateFields((err, values) => {
             // 解构取值
             if (!err) {
-                const { clubname, createdate, introduce, clublogo, clubstyle } = values;
+                const { clubname, createdate, introduce, clubstyle } = values;
+                const formData = new FormData();
+                formData.append('files[]', this.state.fileList);
                 // 发起网络请求
-                // axios({
-                //     method: 'post',
-                //     url: '',
-                //     data: {
-                //         clubname, createdate, introduce, clublogo, clubstyle
-                //     }
-                // }).then(res => {
-                //     if (res.status === 200 && res.data) {
-                //         if (res.data.status === 'success') {
-                //             message.success('社团创建成功！');
-                //         }
-                //     }
-                // });
                 axios({
                     method: 'post',
-                    url: 'http://192.168.6.104:8081/club/upload',
+                    url: '',
                     data: {
-                        clublogo
+                        clubname, createdate, introduce, clubstyle, formData
                     }
                 }).then(res => {
                     if (res.status === 200 && res.data) {
                         if (res.data.status === 'success') {
-                            message.success('图片上传成功！');
+                            message.success('社团创建成功！');
                         }
                     }
                 });
             }
         });
+
     };
 
 
@@ -119,7 +127,6 @@ class index extends Component {
                                 })(
                                     <div className="clearfix">
                                         <Upload
-                                            action="//jsonplaceholder.typicode.com/posts/"
                                             listType="picture-card"
                                             fileList={fileList}
                                             onPreview={this.handlePreview}
@@ -140,13 +147,15 @@ class index extends Component {
                                     <Option value="study">学习类</Option>
                                 </Select>
                             </Form.Item>
-                            <Form.Item className={styles.crcb_content_form_btn}>
-                                <Button onClick={this.handleSubmit} className={styles.crcb_content_form_btnitem} type="primary">提交</Button>
-                                <Button onClick={this.handleSubmit} className={styles.crcb_content_form_btnitem} type="primary">删除</Button>
-                            </Form.Item>
                         </Form>
+                        <div className={styles.crcb_content_form_btn}>
+                            <Button onClick={this.handleSubmit} className={styles.crcb_content_form_btnitem} type="primary">提交</Button>
+                            <Button onClick={this.handleSubmit} className={styles.crcb_content_form_btnitem} type="primary"><Link to={'/Allclub'}>返回</Link></Button>
+                        </div>
                     </Content>
-                    <Footer className={styles.crcb_footer}>社团星</Footer>
+                    <Footer className={styles.crcb_footer}>
+                        <div className={styles.crcb_footer_word}>社团星</div>
+                    </Footer>
                 </Layout>
             </div>
         );

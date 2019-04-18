@@ -17,6 +17,8 @@ function IndexPage() {
       <Button block><Link to="/Personal">Personal页面</Link></Button>
       <Button block><Link to="/Createclub">Createclub页面</Link></Button>
       <Button block><Link to="/Allclub">Allclub页面</Link></Button>
+      <Button block><Link to="/Manage">Manage页面</Link></Button>
+
     </div>
   );
 }

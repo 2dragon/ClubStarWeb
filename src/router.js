@@ -9,6 +9,7 @@ import Resetpsd from './pages/Resetpsd';
 import Personal from './pages/Personal';
 import Createclub from './pages/Createclub';
 import Allclub from './pages/Allclub';
+import Manage from './pages/Manage';
 
 function RouterConfig({ history }) {
   return (
@@ -23,6 +24,7 @@ function RouterConfig({ history }) {
         <Route path="/Personal" exact component={Personal} />
         <Route path="/Createclub" exact component={Createclub} />
         <Route path="/Allclub" exact component={Allclub} />
+        <Route path="/Manage" exact component={Manage} />
       </Switch>
     </Router>
   );
