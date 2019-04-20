@@ -12,7 +12,7 @@
   .regi_bg {
     background-color: rgba(255, 255, 255, 0.4);
     width: 44vw;
-    height: 93vh;
+    height: 96vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,33 +22,39 @@
       background-color: rgba(255, 255, 255, 0.9);
       opacity: 1;
       width: 27vw;
-      height: 79vh;
+      height: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-    .regi_icon {
-      background: url(../../assets/xingqiu.png);
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      width: 6vw;
-      height: 12vh;
-      
-    }
-    .regi_form {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .regi_form_item {
-        margin: 0;
-        padding: 0;
-        width: 17vw;
+
+      .regi_icon {
+        background: url(../../assets/xingqiu.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 6vw;
+        height: 12vh;
       }
-      .regi_form_btn {
-        margin-top: 4vh;
-        width: 17vw;
+      .regi_form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .regi_form_item {
+          margin: 0;
+          padding: 0;
+          width: 17vw;
+          margin-top: -1vh;
+        }
+        .regi_form_btn {
+          margin-top: 3vh;
+          width: 17vw;
+        }
       }
+    }
+    .regi_form_loding {
+      position: fixed;
+      left: 48vw;
+      top: 50vh;
     }
   }
 }

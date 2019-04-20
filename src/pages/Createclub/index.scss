@@ -1,0 +1,78 @@
+.crcb_page {
+  width: 100%;
+  height: auto;
+  .crcb_header {
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    width: 100%;
+    height: 9vh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.09);
+    .crcb_logo {
+      background: url(../../assets/logo.png);
+      width: 17vw;
+      height: 9vh;
+      float: left;
+      margin-left: 5vw;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .crcb_menu {
+      width: auto;
+      height: 7vh;
+      float: right;
+      border: none;
+      margin-top: 1vh;
+    }
+  }
+  .crcb_content {
+    margin-top: 9vh;
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    .crcb_content_word {
+      height: 6vh;
+      font-size: 32px;
+      margin-top: 3vh;
+      margin-left: 15vw;
+    }
+    .crcb_content_form {
+      margin-left: 35vw;
+      margin-top: 3vh;
+      .crcb_content_form_item {
+        display: flex;
+        height: auto;
+        .crcb_content_form_item_con {
+          width: 25vw;
+        }
+      }
+    }
+    .crcb_content_form_btn {
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-around;
+      align-content: space-between;
+      width: 35%;
+      height: auto;
+      margin-bottom: 10vh;
+      .crcb_content_form_btnitem {
+        width: 6vw;
+      }
+    }
+  }
+  .crcb_footer {
+    height: auto;
+    .crcb_footer_word {
+      width: 100%;
+      height: 5vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0;
+    }
+  }
+}

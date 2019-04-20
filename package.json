@@ -11,9 +11,11 @@
     "axios": "^0.18.0",
     "babel-plugin-import": "^1.11.0",
     "dva": "^2.4.1",
+    "dva-cli": "^0.10.1",
     "node-sass": "^4.11.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-lazyload": "^2.5.0",
     "sass": "^1.17.3",
     "sass-loader": "^7.1.0"
   },
