@@ -1,0 +1,101 @@
+$bccolor: rgb(240, 240, 240);
+.crcb_page {
+  width: 100%;
+  height: auto;
+  .crcb_header {
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 9vh;
+    // box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.09);
+    .crcb_logo {
+      background: url(../../assets/logo.png);
+      width: 17vw;
+      height: 9vh;
+      float: left;
+      margin-left: 5vw;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .crcb_menu {
+      float: right;
+      height: 7vh;
+      border: none;
+      margin-top: 1vh;
+    }
+  }
+  .crcb_content {
+    width: 100%;
+    height: auto;
+    background-color: $bccolor;
+    margin-top: 9vh;
+    margin-bottom: 9vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .act_img {
+      margin-top: 8vh;
+      background: url(../../assets/ictmain.png);
+      width: 85vw;
+      height: 30vh;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .crcb_content_word {
+      margin-top: 3vh;
+      font-size: 27px;
+    }
+    .act_card {
+      margin-top: 5vh;
+      background-color: #fff;
+      width: 75%;
+      height: 33vh;
+      display: flex;
+      .act_card_left {
+        float: left;
+        img {
+          width: 23vw;
+          height: 33vh;
+        }
+      }
+      .act_card_right {
+        float: right;
+        margin-left: 5vw;
+        display: flex;
+        flex-direction: column;
+        .act_card_right_title {
+          margin-top: 1vh;
+          font-size: 22px;
+        }
+        .act_card_right_content {
+          margin-top: 2vh;
+          font-size: 14px;
+          width: 37vw;
+        }
+        .act_card_right_btn {
+          position: absolute;
+          width: 6vw;
+          margin-top: 25vh;
+          background-color: rgb(235, 103, 42);
+          border-color: rgb(235, 103, 42);
+        }
+      }
+    }
+  }
+  .crcb_footer {
+    width: 100%;
+    height: auto;
+    background-color: $bccolor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .crcb_footer_word {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
