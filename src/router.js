@@ -10,7 +10,7 @@ import Personal from './pages/Personal';
 import Createclub from './pages/Createclub';
 import Allclub from './pages/Allclub';
 import Manage from './pages/Manage';
-
+import ClubActivity from './pages/ClubActivity';
 function RouterConfig({ history }) {
   return (
     <Router history={history}>
@@ -25,6 +25,7 @@ function RouterConfig({ history }) {
         <Route path="/Createclub" exact component={Createclub} />
         <Route path="/Allclub" exact component={Allclub} />
         <Route path="/Manage" exact component={Manage} />
+        <Route path="/ClubActivity" exact component={ClubActivity} />
       </Switch>
     </Router>
   );

@@ -28,8 +28,8 @@ class index extends Component {
                             defaultSelectedKeys={['mail']} style={{ lineHeight: '8vh', border: 'none' }} >
                             <Menu.Item className={styles.crcb_menuitem} key="mail"><Link to={'/Home'}>首页</Link></Menu.Item>
                             <Menu.Item className={styles.crcb_menuitem} key="notice">社团公告</Menu.Item>
-                            <Menu.Item className={styles.crcb_menuitem} key="activity">社团活动</Menu.Item>
-                            <Menu.Item className={styles.crcb_menuitem} key="prize">社团奖</Menu.Item>
+                            <Menu.Item className={styles.crcb_menuitem} key="activity"><Link to={'/ClubActivity'}>社团活动</Link></Menu.Item>
+                            <Menu.Item className={styles.crcb_menuitem} key="prize">社团荣誉</Menu.Item>
                             <Menu.Item className={styles.crcb_menuitem} key="all" ><Link to={'/Allclub'}>全部社团</Link></Menu.Item>
                             <Menu.Item className={styles.crcb_menuitem} key="per" ><Link to={'/Personal'}>个人中心</Link></Menu.Item>
                         </Menu>
