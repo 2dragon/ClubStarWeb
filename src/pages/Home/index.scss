@@ -237,16 +237,22 @@
               }
             }
             .home_main_prize_item_introduce_check {
-              display: block;
               margin: 5vh auto;
+              background-color: rgb(29, 26, 26);
+              width: 6vw;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
               a {
                 color: #fff;
                 padding: 3px 24px;
                 font-size: 16px;
-                background-color: rgb(29, 26, 26);
-                // a:hover{
-                //   color: #f04848;
-                // }
+                &:hover{
+                  // color: rgb(231, 164, 41);
+                  // border-color: black;
+                }
               }
             }
           }

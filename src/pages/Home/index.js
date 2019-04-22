@@ -171,21 +171,21 @@ class index extends Component {
                                     <img src={require('../../assets/prize1.jpg')} alt="" />
                                     <div className={styles.home_main_prize_item_introduce}>
                                         <div className={styles.home_main_prize_name}><a href="">优秀社团</a></div>
-                                        <div className={styles.home_main_prize_item_introduce_check}><a href="">查看</a></div>
+                                        <Button className={styles.home_main_prize_item_introduce_check}><a href="">查看</a></Button>
                                     </div>
                                 </div>
                                 <div className={styles.home_main_prize_item}>
                                     <img src={require('../../assets/prize2.jpg')} alt="" />
                                     <div className={styles.home_main_prize_item_introduce}>
                                         <div className={styles.home_main_prize_name}><a href="">优秀社团部</a></div>
-                                        <div className={styles.home_main_prize_item_introduce_check}><a href="">查看</a></div>
+                                        <Button className={styles.home_main_prize_item_introduce_check}><a href="">查看</a></Button>
                                     </div>
                                 </div>
                                 <div className={styles.home_main_prize_item}>
                                     <img src={require('../../assets/prize3.jpg')} alt="" />
                                     <div className={styles.home_main_prize_item_introduce}>
                                         <div className={styles.home_main_prize_name}><a href="">优秀社团部部长</a></div>
-                                        <div className={styles.home_main_prize_item_introduce_check}><a href="">查看</a></div>
+                                        <Button className={styles.home_main_prize_item_introduce_check}><a href="">查看</a></Button>
                                     </div>
                                 </div>
                             </div>

@@ -16,16 +16,17 @@ class index extends Component {
         previewImage: '',
         fileList: [],
     };
+    //图片默认上传后可见，图片取消上传后，让图片不可见
+    handleCancel = () => this.setState({ previewVisible: false });
 
-    handleCancel = () => this.setState({ previewVisible: false })
-
+    //设置文件的地址与可见性
     handlePreview = (file) => {
         this.setState({
             previewImage: file.url || file.thumbUrl,
             previewVisible: true,
         });
     }
-
+    // 上传文件改变时，重新赋值
     handleChange = ({ fileList }) => this.setState({ fileList })
 
     //提交函数
@@ -50,29 +51,43 @@ class index extends Component {
         // });
         // loading;
         //表单获取
-        this.props.form.validateFields((err, values) => {
-            // 解构取值
-            if (!err) {
-                const { clubname, createdate, introduce, clubstyle } = values;
-                const formData = new FormData();
-                formData.append('files[]', this.state.fileList);
-                // 发起网络请求
-                axios({
-                    method: 'post',
-                    url: '',
-                    data: {
-                        clubname, createdate, introduce, clubstyle, formData
-                    }
-                }).then(res => {
-                    if (res.status === 200 && res.data) {
-                        if (res.data.status === 'success') {
-                            message.success('社团创建成功！');
-                        }
-                    }
-                });
-            }
-        });
+        // this.props.form.validateFields((err, values) => {
+        //     // 解构取值
+        //     if (!err) {
+        //         const { clubname, createdate, introduce, clubstyle } = values;
+        //         // let {url} = ;
+        //         let uploadFile = this.state.fileList[0];
 
+        //         // const uploadFile = new FormData();
+        // uploadFile.append('clublogo', this.state.fileList);
+        // console.log("我的天那！");
+        // console.log(uploadFile);
+
+        // console.log(uploadFile.get("fileList[]"));
+        // 发起网络请求
+        //     axios({
+        //         headers: {
+        //             'Content-Type': 'multipart/form-data;charset=UTF-8',
+        //         },
+        //         method: 'post',
+        //         url: 'http://192.168.6.104:8081/club/upload',
+        //         data: {
+        //             // clubname, createdate, introduce, clubstyle, 
+        //             uploadFile: uploadFile
+        //         },
+
+        //     }).then(res => {
+        //         if (res.status === 200 && res.data) {
+        //             if (res.data.status === 'success') {
+        //                 message.success('社团创建成功！');
+        //             }
+        //         }
+        //     });
+        // }
+        // });
+        // let uploadFile= fileList[0].uid;
+        // console.log("我的天那！");
+        // console.log(uploadFile);
     };
 
 
@@ -123,22 +138,19 @@ class index extends Component {
                                 )}
                             </Form.Item>
                             <Form.Item label="上传头像:" className={styles.crcb_content_form_item} >
-                                {getFieldDecorator('clublogo', {
-                                })(
-                                    <div className="clearfix">
-                                        <Upload
-                                            listType="picture-card"
-                                            fileList={fileList}
-                                            onPreview={this.handlePreview}
-                                            onChange={this.handleChange}
-                                        >
-                                            {fileList.length >= 1 ? null : uploadButton}
-                                        </Upload>
-                                        <Modal visible={previewVisible} footer={null} onCancel={this.handleCancel}>
-                                            <img alt="example" style={{ width: '100%' }} src={previewImage} />
-                                        </Modal>
-                                    </div>
-                                )}
+                                <Upload
+                                    listType="picture-card"
+                                    fileList={fileList}
+                                    onPreview={this.handlePreview}
+                                    onChange={this.handleChange}
+                                    action="http://192.168.6.104:8081/club/upload"
+                                    headers=" 'Content-Type': 'multipart/form-data'"
+                                >
+                                    {fileList.length >= 1 ? null : uploadButton}
+                                </Upload>
+                                <Modal visible={previewVisible} footer={null} onCancel={this.handleCancel}>
+                                    <img alt="upload_img" style={{ width: '100%' }} src={previewImage} />
+                                </Modal>
                             </Form.Item>
                             <Form.Item label="社团类型" className={styles.crcb_content_form_item} >
                                 {getFieldDecorator('clubstyle')}
