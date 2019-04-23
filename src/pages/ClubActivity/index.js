@@ -4,6 +4,7 @@ import { Form, Layout, Menu, Button } from 'antd';
 // import axios from 'axios';
 // import LazyLoad from 'react-lazyload';
 import { Link } from 'dva/router';
+import Cswheader from '../../components/Cswheader';
 
 const { Header, Footer, Content } = Layout;
 
@@ -43,18 +44,7 @@ class index extends Component {
         return (
             <div className={styles.crcb_page} >
                 <Layout>
-                    <Header className={styles.crcb_header}>
-                        <div className={styles.crcb_logo}></div>
-                        <Menu className={styles.crcb_menu} theme="light" mode="horizontal"
-                            defaultSelectedKeys={['2']} style={{ lineHeight: '8vh', border: 'none' }} >
-                            <Menu.Item className={styles.crcb_menuitem} key="mail"><Link to={'/Home'}>首页</Link></Menu.Item>
-                            <Menu.Item className={styles.crcb_menuitem} key="notice" ><Link to={'/Home'}>社团公告</Link></Menu.Item>
-                            <Menu.Item className={styles.crcb_menuitem} key="activity" ><Link to={'/Home'}>社团活动</Link></Menu.Item>
-                            <Menu.Item className={styles.crcb_menuitem} key="prize" ><Link to={'/Home'}>社团荣誉</Link></Menu.Item>
-                            <Menu.Item className={styles.crcb_menuitem} key="all" ><Link to={'/Allclub'}>全部社团</Link></Menu.Item>
-                            <Menu.Item className={styles.crcb_menuitem} key="per" ><Link to={'/Personal'}>个人中心</Link></Menu.Item>
-                        </Menu>
-                    </Header>
+                   <Cswheader/>
                     <Content className={styles.crcb_content}>
                         <div className={styles.act_img}></div>
                         <div className={styles.crcb_content_word}>社团活动一览表</div>
