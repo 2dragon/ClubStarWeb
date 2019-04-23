@@ -11,6 +11,7 @@ import Createclub from './pages/Createclub';
 import Allclub from './pages/Allclub';
 import Manage from './pages/Manage';
 import ClubActivity from './pages/ClubActivity';
+import Test from './pages/Test';
 function RouterConfig({ history }) {
   return (
     <Router history={history}>
@@ -26,6 +27,8 @@ function RouterConfig({ history }) {
         <Route path="/Allclub" exact component={Allclub} />
         <Route path="/Manage" exact component={Manage} />
         <Route path="/ClubActivity" exact component={ClubActivity} />
+        <Route path="/Test" exact component={Test} />
+
       </Switch>
     </Router>
   );
