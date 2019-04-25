@@ -13,6 +13,7 @@ import Manage from './pages/Manage';
 import ClubActivity from './pages/ClubActivity';
 import Test from './pages/Test';
 import Forum from './pages/Forum';
+import Clubhonor from './pages/Clubhonor';
 function RouterConfig({ history }) {
   return (
     <Router history={history}>
@@ -30,6 +31,7 @@ function RouterConfig({ history }) {
         <Route path="/ClubActivity" exact component={ClubActivity} />
         <Route path="/Test" exact component={Test} />
         <Route path="/Forum" exact component={Forum} />
+        <Route path="/Clubhonor" exact component={Clubhonor} />
       </Switch>
     </Router>
   );
