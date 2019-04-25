@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import styles from './index.scss';
-import { Form, Layout, Menu, Input, Card, Button } from 'antd';
+import { Form, Layout, Input, Card, Button } from 'antd';
 // import axios from 'axios';
 // import LazyLoad from 'react-lazyload';
 import { Link } from 'dva/router';
 import Cswheader from '../../components/Cswheader';
 
-const { Header, Footer, Content } = Layout;
+const { Footer, Content } = Layout;
 const Search = Input.Search;
 const { Meta } = Card;
 

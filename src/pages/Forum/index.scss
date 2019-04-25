@@ -1,0 +1,63 @@
+.crcb_page {
+    width: 100%;
+    height: auto;
+    .crcb_content {
+      margin-top: 9vh;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      .crcb_content_word {
+        margin-top: 1vh;
+        font-size: 25px;
+      }
+      .crcb_content_allsearch {
+        display: flex;
+        margin-top: 3vh;
+        .crcb_content_search {
+          margin-left: 7vw;
+        }
+        .crcb_content_searchword {
+          margin-top: auto;
+          margin-bottom: auto;
+          margin-left: 2vw;
+          font-size: 15px;
+        }
+      }
+      .crcb_content_form {
+        background-color: rgb(251, 251, 251);
+        box-shadow: inset 0 0px 2px 0 rgba(0, 0, 0, 0.09);
+  
+        width: 80%;
+  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-between;
+  
+        margin: 20px auto;
+        .crcb_content_form_lazyload {
+          margin-top: 5vh;
+          height: auto;
+        }
+      }
+    }
+    .crcb_footer {
+      width: 100%;
+      height: auto;
+      background-color: rgb(233, 233, 233);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .crcb_footer_word {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  
