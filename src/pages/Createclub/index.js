@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import styles from './index.scss';
-import { Form, Layout, Menu, Icon, Input, Select, DatePicker, Upload, Button, Modal } from 'antd';
+import { Form, Layout,  Icon, Input, Select, DatePicker, Upload, Button, Modal } from 'antd';
 // import axios from 'axios';
 import { Link } from 'dva/router';
 import Cswheader from '../../components/Cswheader'
 
-const { Header, Footer, Content } = Layout;
+const { Footer, Content } = Layout;
 const { Option } = Select;
 const { TextArea } = Input;
 

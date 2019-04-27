@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 import styles from './index.scss';
-import { Form, Layout, Menu } from 'antd';
+import { Form, Layout } from 'antd';
 import Cswheader from '../../components/Cswheader'
-import { Link } from 'dva/router';
 
-const { Header, Footer, Content } = Layout;
+const { Footer, Content } = Layout;
 
 class index extends Component {
 
     render() {
-
-        return(
-
+        return (
             <div className={styles.crcb_page} >
                 <Layout>
-                    <Cswheader/>
+                    <Cswheader />
                     <Content className={styles.crcb_content}>
                         <div className={styles.act_imgs}>
                             <img src={require('../../assets/club2.jpg')} alt="社团荣誉" />
@@ -30,7 +27,7 @@ class index extends Component {
                                 <div className={styles.act_card_img}>
                                     <img src={require('../../assets/prize1.jpg')} alt="社团" />
                                 </div>
-                                
+
                             </div>
                             <div className={styles.act_card_one}>
                                 <div className={styles.act_card_title}>
@@ -56,7 +53,7 @@ class index extends Component {
                                     <img src={require('../../assets/prize1.jpg')} alt="社团" />
                                 </div>
                             </div>
-                    </div>
+                        </div>
                     </Content>
                     <Footer className={styles.crcb_footer}>
                         <div className={styles.home_footer_copyright}>

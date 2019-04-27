@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import styles from './index.scss';
-import { Form, Layout, Menu, Input, Carousel, Icon, Button } from 'antd';
-import { Link } from 'dva/router';
-// import axios from 'axios';
-// import LazyLoad from 'react-lazyload';
+import { Form, Layout, Input, Carousel, Icon, Button } from 'antd';
 import Cswheader from '../../components/Cswheader'
-const { Header, Footer, Content } = Layout;
+const {  Footer, Content } = Layout;
 const Search = Input.Search;
 
 class index extends Component {
