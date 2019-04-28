@@ -23,6 +23,7 @@ function IndexPage() {
         <Button block><Link to="/Test">Test页面</Link></Button>
         <Button block><Link to="/Forum">Forum页面</Link></Button>
         <Button block><Link to="/Clubhonor">Clubhonor页面</Link></Button>
+        <Button block><Link to="/Notices">Notices页面</Link></Button>
       </div>
 
 
