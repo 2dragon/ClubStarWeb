@@ -108,18 +108,19 @@ $bccolor: rgb(240, 240, 240);
       }
       .event_right {
         float: right;
-        width: 40vw;
+        width: 43vw;
         background-color: #fff;
-        margin-left: 5vw;
+        margin-left: 1vw;
+        padding-left: 2vw;
         display: flex;
         flex-direction: column;
         .event_right_title {
-          margin-top: 1vh;
+          margin-top: 4vh;
           color: #000;
           font-size: 28px;
         }
         .event_right_details {
-          margin-top: 2vh;
+          margin-top: 4vh;
           font-size: 14px;
           width: 37vw;
         }
