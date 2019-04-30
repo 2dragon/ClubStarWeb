@@ -9,13 +9,16 @@ const { Footer, Content } = Layout;
 
 class index extends Component {
     eventArray = [
-        { imgherf: require("../../assets/lunbo3.jpg"), acttitle: '2018 最可爱的运动会', actdescription: '2018的冲劲请也留在2019继续加油' },
-        { imgherf: require("../../assets/lunbo4.jpg"), acttitle: '文理最强音|最热情的校园歌手大赛', actdescription: '那年青春我们正好' },
+        { imgherf: require("../../assets/lunbo3.jpg"), acttitle: '甲级团支部评选活动！来自十八个学院', actdescription: '最文艺的校长，校内拿吉他自弹自唱' },
+        { imgherf: require("../../assets/lunbo4.jpg"), acttitle: '芙蓉学子，榜样力量。优秀大学生评选', actdescription: '网红寝室，少女心and极简主义' },
 
     ];
     clubArray = [
         { imgherf: require("../../assets/lunbo1.jpg"), acttitle: '3V3篮球赛|无篮球不青春', actdescription: '篮球本身就是意义' },
         { imgherf: require("../../assets/lunbo1.jpg"), acttitle: '创意井盖|关于文理的美好幻想', actdescription: '用小小的井盖来诉说文理美好的幻想' },
+        { imgherf: require("../../assets/lunbo3.jpg"), acttitle: '2018 最可爱的运动会', actdescription: '2018的冲劲请也留在2019继续加油' },
+        { imgherf: require("../../assets/lunbo4.jpg"), acttitle: '文理最强音|最热情的校园歌手大赛', actdescription: '那年青春我们正好' },
+
     ]
 
     render() {
