@@ -9,15 +9,15 @@ const { Footer, Content } = Layout;
 
 class index extends Component {
     eventArray = [
-        { imgherf: require("../../assets/lunbo3.jpg"), acttitle: '甲级团支部评选活动！来自十八个学院', actdescription: '最文艺的校长，校内拿吉他自弹自唱' },
-        { imgherf: require("../../assets/lunbo4.jpg"), acttitle: '芙蓉学子，榜样力量。优秀大学生评选', actdescription: '网红寝室，少女心and极简主义' },
+        { imgherf: require("../../assets/notice1.png"), acttitle: '甲级团支部评选活动！来自十八个学院', actdescription: '最文艺的校长，校内拿吉他自弹自唱' },
+        { imgherf: require("../../assets/notice2.png"), acttitle: '芙蓉学子，榜样力量。优秀大学生评选', actdescription: '网红寝室，少女心and极简' },
 
     ];
     clubArray = [
-        { imgherf: require("../../assets/lunbo1.jpg"), acttitle: '3V3篮球赛|无篮球不青春', actdescription: '篮球本身就是意义' },
-        { imgherf: require("../../assets/lunbo1.jpg"), acttitle: '创意井盖|关于文理的美好幻想', actdescription: '用小小的井盖来诉说文理美好的幻想' },
-        { imgherf: require("../../assets/lunbo3.jpg"), acttitle: '2018 最可爱的运动会', actdescription: '2018的冲劲请也留在2019继续加油' },
-        { imgherf: require("../../assets/lunbo4.jpg"), acttitle: '文理最强音|最热情的校园歌手大赛', actdescription: '那年青春我们正好' },
+        { imgherf: require("../../assets/event1.png"), acttitle: '3V3篮球赛|无篮球不青春', actdescription: '篮球本身就是意义' },
+        { imgherf: require("../../assets/event2.png"), acttitle: '创意井盖|关于文理的美好幻想', actdescription: '用小小的井盖来诉说文理美好的幻想' },
+        { imgherf: require("../../assets/event3.png"), acttitle: '2018 最可爱的运动会', actdescription: '2018的冲劲请也留在2019继续加油' },
+        { imgherf: require("../../assets/event4.png"), acttitle: '文理最强音|最热情的校园歌手大赛', actdescription: '那年青春我们正好' },
 
     ]
 
@@ -31,7 +31,7 @@ class index extends Component {
                         <img src={event.imgherf} alt="重点公告事件" />
                     </div>
                     <div className={styles.event_right}>
-                        <div className={styles.event_right_title}>{event.acttitle}</div>
+                        <div className={styles.event_right_title}><a > {event.acttitle}</a></div>
                         <div className={styles.event_right_details}>{event.actdescription}</div>
                     </div>
                 </div>
@@ -63,15 +63,24 @@ class index extends Component {
                             <Carousel autoplay>
                                 <div>
                                     <img src={require('../../assets/lunbo2.jpg')} alt="notice2" />
-                                    <div className={styles.crcb_play_word}>7329u49r239</div>
+                                    <div className={styles.crcb_play_word}>
+                                        <h2>升旗仪式</h2>
+                                        <h3>以春之名，新学期第一次升旗仪式举行</h3>
+                                    </div>
                                 </div>
                                 <div>
                                     <img src={require('../../assets/lunbo3.jpg')} alt="notice3" />
-                                    <div className={styles.crcb_play_word}>7329u49r239</div>
+                                    <div className={styles.crcb_play_word}>
+                                        <h2>升旗仪式</h2>
+                                        <h3>以春之名，新学期第一次升旗仪式举行</h3>
+                                    </div>
                                 </div>
                                 <div>
                                     <img src={require('../../assets/lunbo4.jpg')} alt="notice1" />
-                                    <div className={styles.crcb_play_word}>7329u49r239</div>
+                                    <div className={styles.crcb_play_word}>
+                                        <h2>升旗仪式</h2>
+                                        <h3>以春之名，新学期第一次升旗仪式举行</h3>
+                                    </div>
                                 </div>
                             </Carousel>
                         </div>
