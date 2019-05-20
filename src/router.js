@@ -68,6 +68,30 @@ const RouteConfig = [
     name: 'Register',
     component: () => import('./pages/Register'),
   },
+  {
+    path: '/Clubhonor',
+    // model:[],
+    name: 'Clubhonor',
+    component: () => import('./pages/Clubhonor'),
+  },
+  {
+    path: '/Forum',
+    // model:[],
+    name: 'Forum',
+    component: () => import('./pages/Forum'),
+  },
+  {
+    path: '/Notices',
+    // model:[],
+    name: 'Notices',
+    component: () => import('./pages/Notices'),
+  },
+  {
+    path: '/ClubActivity',
+    // model:[],
+    name: 'ClubActivity',
+    component: () => import('./pages/ClubActivity'),
+  },
 ]
 
 function RouterConfig({ history, app }) {
